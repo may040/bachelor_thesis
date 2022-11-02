@@ -1,0 +1,34 @@
+\usepackage{icomma}
+\usepackage{fnpct}
+\usepackage[final]{microtype}
+
+\usepackage[ngerman,american]{babel}
+\AtBeginDocument{\selectlanguage{ngerman}}
+\newcommand*{\ngerman}[1]{\foreignlanguage{ngerman}{#1}}
+\newcommand*{\usenglish}[1]{\foreignlanguage{american}{#1}}
+
+\usepackage[autostyle,german=quotes,english=american]{csquotes}
+
+\usepackage{setspace}
+\setstretch{1.2}
+
+\usepackage[headsepline,plainheadsepline,draft=false]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\ohead[\pagemark]{\pagemark}
+\chead[]{}
+\ihead[]{\headmark}
+\ifoot[]{}
+\cfoot[]{}
+\ofoot[]{}
+\setkomafont{pageheadfoot}{\normalfont\sffamily}
+\setkomafont{pagenumber}{\sffamily\bfseries}
+\setkomafont{descriptionlabel}{\normalfont\slshape}
+\deffootnote[2em]{2.5em}{1.5em}{\thefootnotemark\ }
+
+%set a penality to prevent Schusterjungen und Hurenkinder
+\widowpenalties=4 10000 10000 150 0 
+
+% If you have the problem that many graphics are pushed at the end of the chapter try enabling the next line.
+%\raggedbottom
+
+\KOMAoptions{DIV=last}
